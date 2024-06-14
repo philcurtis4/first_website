@@ -25,6 +25,10 @@ body {
 a {
     color: #222;
 }
+
+img {
+    max-width: 100%;
+}
 /* CUSTOM STYLES */
 
 header {
@@ -76,8 +80,31 @@ header nav a.active {
    /* border: 3px solid #000; */
    font-size: 2rem;
 }
-main {
+
+figure {
     display: flex;
+}
+
+figure img {
+    width: 45%;
+}
+
+figure figcaption {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+}
+
+figure figcaption h3 {
+    margin-bottom: 5px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     /* justify-content: center;
     align-items: center; */
     flex: 1;
@@ -144,6 +171,20 @@ footer{
 
     footer p {
         margin: 4px 0;
+    }
+}
+
+@media (min-width: 900px) {
+    figure {
+        padding: 0 15%;
+    }
+
+    figcaption {
+        font-size: 2rem;
+    }
+
+    figcaption p {
+        font-size: 1.5rem;
     }
 }
 
